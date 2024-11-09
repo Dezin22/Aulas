@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <style>
+      .tarefa {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 8px;
+        margin-bottom: 5px;
+      }
+      .tarefa p {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gerenciador de Tarefas</h1>
+    <form id="form-tarefa" autocomplete="off">
+      <div>
+        <label for="tarefa">Tarefa: </label>
+        <input type="text" name="tarefa" id="tarefa" />
+      </div>
+      <div>
+        <label for="descricao">Descrição: </label>
+        <input type="text" name="descricao" id="descricao" />
+      </div>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <hr />
+
+    <h2>Tarefas</h2>
+    <ul id="tarefas"></ul>
+
+    <script>
+      const formulario = document.getElementById("form-tarefa");
+
+      function criarLiTarefa(tarefa, descricao) {
+        const liTarefa = document.createElement("li");
+        
+        const pTarefa = document.createElement("p");
+        pTarefa.textContent = tarefa;
+
+        const pDescricao = document.createElement("p");
+        pDescricao.textContent = descricao;
+
+        const divInfo = document.createElement("div");
+        divInfo.appendChild(pTarefa);
+        divInfo.appendChild(pDescricao);
+
+        const checkboxTarefa = document.createElement("input");
+        checkboxTarefa.type = "checkbox";
+
+        const botaoEditar = document.createElement("button");
+        botaoEditar.textContent = "Editar";
+        botaoEditar.onclick = () => editarTarefa(liTarefa, pTarefa, pDescricao);
+
+        const botaoRemover = document.createElement("button");
+        botaoRemover.textContent = "Remover";
+        botaoRemover.onclick = () => removerTarefa(liTarefa);
+
+        const divAcoes = document.createElement("div");
+        divAcoes.appendChild(checkboxTarefa);
+        divAcoes.appendChild(botaoEditar);
+        divAcoes.appendChild(botaoRemover);
+
+        liTarefa.appendChild(divInfo);
+        liTarefa.appendChild(divAcoes);
+        liTarefa.classList.add("tarefa");
+
+        return liTarefa;
+      }
+
+      function handleAdicionarTarefa(event) {
+        event.preventDefault();
+
+        const tarefa = formulario.tarefa.value;
+        const descricao = formulario.descricao.value;
+
+        const liTarefa = criarLiTarefa(tarefa, descricao);
+
+        const ulTarefas = document.getElementById("tarefas");
+        ulTarefas.appendChild(liTarefa);
+
+        formulario.tarefa.value = "";
+        formulario.descricao.value = "";
+      }
+
+      function removerTarefa(liTarefa) {
+        liTarefa.remove();
+      }
+
+      function editarTarefa(liTarefa, pTarefa, pDescricao) {
+        const novaTarefa = prompt("Editar tarefa:", pTarefa.textContent);
+        const novaDescricao = prompt("Editar descrição:", pDescricao.textContent);
+
+        if (novaTarefa !== null) {
+          pTarefa.textContent = novaTarefa;
+        }
+
+        if (novaDescricao !== null) {
+          pDescricao.textContent = novaDescricao;
+        }
+      }
+
+      formulario.addEventListener("submit", handleAdicionarTarefa);
+    </script>
+  </body>
+</html>
