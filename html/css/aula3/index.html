@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 HTML & CSS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .grid-container{
+            display: grid;
+            grid-template-columns: 80px 80px 80px;
+            grid-template-rows: 80px 80px 80px;
+            gap: 5px;
+        }
+        .celula{
+            display: flex;
+            border-style: solid;
+            border-radius: 5px;
+            background-color: lightblue;
+            align-items: center;
+            justify-content: center;
+            
+        
+        }
+        .celula:hover{
+            background-color: lightcoral;
+        }
+        .celula:before{
+            text-align: center;
+            background-color: transparent;
+            content: 'X';
+            font-size: 10px;
+            color: red;
+        }
+    </style>
+    <script>
+        let player = 'o';  // 'o' para bola, 'x' para X
+
+        // Pegando todas as células da grid
+        const celula = document.querySelectorAll('.celula');
+
+        // Função para alternar entre os jogadores
+        function handleClick(event) {
+        const celula = event.target;
+        
+        // Se a célula já tiver um valor (bola ou X), não faz nada
+        if (celula.classList.contains('x') || celula.classList.contains('o')) {
+            return;
+        }
+        
+        // Adiciona a classe do jogador atual
+        celula.classList.add(currentPlayer);
+
+        // Alterna o jogador
+        currentPlayer = currentPlayer === 'o' ? 'x' : 'o';
+        }
+
+        // Adiciona o evento de clique a todas as células
+        celula.forEach(celula => {
+        celula.addEventListener('click', handleClick);
+        });
+    </script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="celula"></div>
+        <div class="celula"></div>
+        <div class="celula"></div>
+        <div class="celula"></div>
+        <div class="celula"></div>
+        <div class="celula"></div>
+        <div class="celula"></div>
+        <div class="celula"></div>
+        <div class="celula"></div>
+    </div>
+</body>
+</html>
