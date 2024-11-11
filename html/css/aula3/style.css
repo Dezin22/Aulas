@@ -1,0 +1,100 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilizando o corpo da página */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    flex-direction: column;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Definindo o estilo da grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+  }
+  
+  /* Estilizando as células da grid */
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  
+  .cell.x {
+    color: red;
+  }
+  
+  .cell.o {
+    color: blue;
+  }
+  
+  /* Estilizando a bola (círculo) e o X */
+  .cell.o::before {
+    background-color: white;
+    content: 'O';
+  }
+  
+  .cell.x::before {
+    background-color: transparent;
+    content: 'X';
+    font-size: 40px;
+    color: red;
+  }
+  
+  /* Mensagem de vitória */
+  .message {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+  }
+  
+  /* Botão de reiniciar */
+  .resetBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .resetBtn:hover {
+    background-color: #45a049;
+  }
+  .reiniciar{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .reiniciar:hover{
+    background-color: #45a049;
+  }
+  
