@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conceito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>O que é o grid?</h1>
+  <p>O CSS Grid Layout é uma técnica poderosa para criar layouts de página complexos de forma mais eficiente e flexível. Ele permite que você divida uma página em uma grade (grid) de linhas e colunas, e coloque itens em diferentes áreas dessa grade.</p>
+  <h2>1- Configurando o Grid</h2>
+  <p>Para começar a usar o Grid Layout, você precisa definir o container que vai usar a grade. Isso é feito aplicando a propriedade display: grid ao elemento container.</p>
+  <h3>Código:</h3>
+  <code>
+    .container {<br>
+      display: grid;<br>
+    }<br>
+    
+  </code>
+  <h3>Explicação:</h3>
+  <p><code>display: grid;<br></code> transforma o elemento com a classe .container em um container de grid.
+    Dentro deste container, você pode definir as linhas e colunas da grid.</p>
+  <h2>2- Definindo Linhas e Colunas</h2>
+  <p>Depois de configurar o container como um grid, você pode definir o número de linhas e colunas usando as propriedades grid-template-rows e grid-template-columns.</p>
+  <h3>Código</h3>
+  <p><code>.container {<br>
+      display: grid;<br>
+      grid-template-rows: 100px 200px;<br>
+      grid-template-columns: 1fr 2fr;<br>
+    }<br>
+    </code></p>
+  <h3>Explicação</h3>
+  <p><b>grid-template-rows: 100px 200px;</b> define duas linhas com 100 pixels e 200 pixels de altura, respectivamente.
+    <br>
+
+    <b>grid-template-columns: 1fr 2fr;</b> define duas colunas. A primeira coluna ocupa 1 fração do espaço disponível e a segunda coluna ocupa 2 frações.
+  </p>
+  <h2>Posicionando Itens na grid</h2>
+  <p>Agora que você definiu a estrutura da grid, pode posicionar os itens dentro dela usando a propriedade grid-area ou as propriedades grid-row e grid-column.</p>
+  <code>
+    .item1 {<br>
+      grid-column: 1 / 2;<br>
+      grid-row: 1 / 3;<br>
+    }<br>
+    
+    .item2 {<br>
+      grid-column: 2 / 3;<br>
+      grid-row: 1 / 2;<br>
+    }<br>
+    
+  </code>
+  <h3>Explicação</h3>
+  <p>
+    <b>grid-column: 1 / 2;</b> faz com que o item ocupe da coluna 1 até a coluna 2 (exclusivo).<br>
+    <b>grid-row: 1 / 3;</b> faz com que o item ocupe da linha 1 até a linha 3 (exclusivo).<br>
+    No exemplo, .item1 ocupa a primeira coluna e abrange duas linhas, enquanto .item2 ocupa a segunda coluna e a primeira linha.
+  </p>
+  <h2>4- Alinhamento de Itens</h2>
+  <p>Você pode alinhar os itens na grid usando as propriedades <b>align-items, justify-items, align-content, e justify-content.</b>
+  </p>
+  <h3>Código</h3>
+  <code>.container {<br>
+    display: grid;<br>
+    grid-template-rows: 100px 200px;<br>
+    grid-template-columns: 1fr 2fr;<br>
+    align-items: center;<br>
+    justify-items: center;<br>
+  }<br>
+  </code>
+  <h3>Explicação</h3>
+  <code>
+    <b>align-items: center;</b> alinha os itens verticalmente ao centro das suas células <br>
+    <b>justify-items: center;</b> alinha os itens horizontalmente ao centro das suas células. <br>
+  </code>
+  <h2>Grid Gap</h2>
+  <p>Você pode adicionar espaço entre as linhas e colunas da grid com a propriedade gap.</p>
+  <code>
+    .container {<br>
+      display: grid;<br>
+      grid-template-rows: 100px 200px;<br>
+      grid-template-columns: 1fr 2fr;<br>
+      gap: 10px;<br>
+    }<br>
+    <h3>Explicação</h3>
+    <p><b>gap: 10px;</b> adiciona 10 pixels de espaço entre todas as linhas e colunas da grid.</p>
+  </code>
+  <hr>
+  <section>
+    <div class="container">
+      <div class="item1">Item 1</div>
+      <div class="item2">Item 2</div>
+      <div class="item3">Item 3</div>
+    </div>
+    <div class="templates">
+
+      <div class="ex1">
+        <h1>Exemplo 1:</h1>
+        <a target="_blank" href="grid_de_tres_colunas.html"><img src="templates/2x3.png" alt=""></a>
+      </div>
+
+      <div class="ex2">
+        <h1>Exemplo 2:</h1>
+        <a target="_blank" href="grid_de_3_colunas_com_diferentes_tamanhos.html"><img src="templates/4.png" alt=""></a>
+      </div>
+
+      <div class="ex3">
+        <h1>Exemplo 3:</h1>
+        <a target="_blank" href="grid_de_quatro_colunas.html"><img src="templates/1 2 1.png" alt=""></a>
+      </div>
+
+      <a href=""><img src="templates/2x2x1.png" alt=""></a>
+      <a href=""><img src="templates/3x8.png" alt=""></a>
+      <a href=""><img src="templates/6.png" alt=""></a>
+      <a href=""><img src="templates/2x2.png" alt=""></a>
+      <a href=""><img src="templates/8.png" alt=""></a>
+      <a href=""><img src="templates/9.png" alt=""></a>
+    </div>
+  </section>
+  <hr>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.781);
+      color: aliceblue;
+
+      h1,
+      h2,
+      h3 {
+        font-family: monospace;
+        color: rgba(176, 184, 111, 0.87);
+        box-shadow: 2px #fafafa;
+      }
+    }
+
+    section {
+      display: grid;
+      gap: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-rows: 100px 200px;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+    }
+
+    img {
+      width: 300px;
+      height: 150px;
+    }
+
+    .templates {
+      display: grid;
+      grid-template-columns: 2fr 2fr 2fr;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      background-color: lightblue;
+    }
+
+    .item2 {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      background-color: lightcoral;
+    }
+
+    .item3 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      background-color: lightgreen;
+    }
+
+    code {
+      background-color: rgba(54, 54, 54, 0.747);
+      color: aliceblue;
+
+    }
+  </style>
+</body>
+
+</html>

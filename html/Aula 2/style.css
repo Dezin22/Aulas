@@ -1,0 +1,16 @@
+table{
+    background-color: rgb(180, 139, 233);
+    border-radius: 5px;
+}
+tr{
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+td{
+    font-size: 20px;
+}
+.Tabela2{
+    font-size: 30px;
+}

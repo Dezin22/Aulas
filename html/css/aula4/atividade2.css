@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(228, 221, 242);
+    font-family: sans-serif;
+}
+.nav-header{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+li{
+    padding: 5px;
+    list-style: none;
+    
+}
+a{
+    color: rgb(222, 14, 14);
+    font-family:monospace;
+    font-size: 20px;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgb(164, 157, 157) 1px 3px;
+    
+}
+h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: center;
+   
+    
+    background-color: rgb(121, 128, 138);
+}
+ul{
+    flex-wrap: wrap;
+}
+
+input{
+    border-radius: 5px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

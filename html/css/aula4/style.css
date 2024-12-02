@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.caixa{
+    background-color: red;
+    height: 250px;
+    width: 250px;
+    margin-top: 10px;
+}
+
+.nav-header{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black ;
+    font-family: sans-serif;
+    background-color: salmon;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media (max-width:760px){
+    .caixa{
+        background-color: blue;
+    }
+    .nav-header{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    a{
+        text-decoration: none;
+        color: black ;
+        font-family: sans-serif;
+        background-color: salmon;
+        border-radius: 5px;
+        padding: 5px;
+    }
+}

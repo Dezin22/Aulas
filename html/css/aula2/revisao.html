@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Selecionando o elemento pela classe */
+        /* estilo de segunda maior prioridade */
+        .caixa-verde{
+            background-color: green;
+            width: 250px;
+            height: 250px;
+        }
+        /* Selecionando o elemento pelo ID */
+        /* estilo de maior prioridade */
+        #diferente{
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: red;
+        }
+        /* Selecionando o elemento pela TAG */
+        /* estilo de menor prioridade */
+        div{
+            border-radius: 18px;
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="caixa-verde" id="diferente">
+    <p>Sou diferente</p>
+</div>
+    
+</body>
+</html>
