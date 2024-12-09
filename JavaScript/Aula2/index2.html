@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Input Dinamicamente</title>
+</head>
+<body>
+
+    <script>
+        // Criando o botão
+        const button = document.createElement('button');
+        button.textContent = 'Acessar';
+        
+        // Criando os campos de input para login e senha
+        const nome = document.createElement('input');
+        nome.type = 'text';  // Tipo de input para texto
+        nome.placeholder = 'Digite o login';  // Placeholder do campo de login
+        
+        const senha = document.createElement('input');
+        senha.type = 'password';  // Tipo de input para senha (oculta)
+        senha.placeholder = 'Digite a senha';  // Placeholder do campo de senha
+        
+        // Adicionando os inputs ao corpo da página
+        document.body.appendChild(nome);
+        document.body.appendChild(senha);
+        
+        // Adicionando o botão ao corpo da página
+        document.body.appendChild(button);
+
+        // Evento de clique no botão
+        button.addEventListener('click', function() {
+            // Pegando os valores dos inputs
+            const nomeValor = nome.value;
+            const senhaValor = senha.value;
+
+            // Verificando as credenciais
+            if (nomeValor == 'admin' && senhaValor == '1234') {
+                window.location.href = 'index.html'
+            } else {
+                alert('Acesso negado');
+            }
+        });
+    </script>
+
+</body>
+</html>
