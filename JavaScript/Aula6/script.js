@@ -1,17 +1,18 @@
-let numero = document.querySelector("#nmb")
-let botao = document.querySelector("#botao")
-
+const numero = document.querySelector("#nmb")
+const botao = document.querySelector("#botao")
+const resultado = document.querySelector("#resultado")
+let resulpnn;
 botao.addEventListener("click",()=>{
     let valor_numero = numero.value
 
     if (valor_numero > 0){
-        console.log("Este numero é positivo")
+        resulpnn = "Positivo"
     }
     else if(valor_numero < 0){
-        console.log("Este numero é negativo")
+        resulpnn = "Negativo"
     }
     else{
-        console.log("Este numero é nulo")
+        resulpnn = "Nulo"
     }
-
+    resultado.innerHTML = resulpnn
 })
