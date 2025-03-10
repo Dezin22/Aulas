@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="titulo"><h1>CADASTRO DE CLIENTE</h1></div>
+
+    <div>
+        <input type="text" placeholder="Digite seu nome" id="nome">
+        <input type="email" placeholder="Digite seu email" id="email">
+        <input type="number" placeholder="Digite seu telefone" id="telefone">
+        <button onclick="cadastrarCliente()">Cadastrar</button>
+    </div>
+    <div>
+        <table id="tabela">
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefone</th>
+        </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
