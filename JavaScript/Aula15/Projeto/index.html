@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="" alt="Spotify Logo">
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="placeholder-icon"></i>
+                    Início
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="placeholder-icon"></i>
+                    Sua Biblioteca
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-item">
+                    <i class="placeholder-icon"></i>
+                    Criar playlist
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="placeholder-icon"></i>
+                    Músicas Curtidas
+                </a>
+            </div>
+            <div class="library">
+                <div class="library-header">
+                    <div class="library-title">
+                        <i class="placeholder-icon"></i>
+                        Suas Playlists
+                    </div>
+                </div>
+                <div class="playlist-list">
+                    <div class="playlist-item">
+                        <div class="playlist-cover"></div>
+                        <div class="playlist-info">
+                            <h4>Playlist #1</h4>
+                            <p>Playlist • Spotify</p>
+                        </div>
+                    </div>
+                    <div class="playlist-item">
+                        <div class="playlist-cover"></div>
+                        <div class="playlist-info">
+                            <h4>Playlist #2</h4>
+                            <p>Playlist • Spotify</p>
+                        </div>
+                    </div>
+                    <div class="playlist-item">
+                        <div class="playlist-cover"></div>
+                        <div class="playlist-info">
+                            <h4>Playlist #3</h4>
+                            <p>Playlist • Spotify</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="topbar">
+                <div class="navigation-buttons">
+                    <button class="nav-button">◀</button>
+                    <button class="nav-button">▶</button>
+                </div>
+                <div class="search-box">
+                    <i class="placeholder-icon"></i>
+                    <input type="text" placeholder="O que você quer ouvir?">
+                </div>
+                <div class="user-menu">
+                    <button class="premium-button">Premium</button>
+                    <div class="user-avatar">U</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Tocados recentemente</h2>
+                    <a href="#" class="section-link">Ver tudo</a>
+                </div>
+                <div class="cards-grid" id="cards-grid">
+    </div>
+
+    <!-- Playback Bar -->
+    <div class="playback-bar">
+        <div class="now-playing">
+            <div class="track-img"></div>
+            <div class="track-info">
+                <h4>Nome da Música</h4>
+                <p>Nome do Artista</p>
+            </div>
+        </div>
+        <div class="track-controls">
+            <div class="control-buttons">
+                <button class="control-button">⟲</button>
+                <button class="control-button">◀◀</button>
+                <button class="control-button play">▶</button>
+                <button class="control-button">▶▶</button>
+                <button class="control-button">⟳</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-time">0:00</div>
+                <div class="progress-bar">
+                    <div class="progress-bar-filled"></div>
+                </div>
+                <div class="progress-time">3:30</div>
+            </div>
+        </div>
+        <div class="volume-controls">
+            <div class="volume-icon">🔊</div>
+            <div class="volume-bar">
+                <div class="volume-bar-filled"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
